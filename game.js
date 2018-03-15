@@ -25,7 +25,7 @@ window.addEventListener("load",function() {
   };
 
   var menu = {
-    text: "Pong",
+    text: "Ping",
     message: "click to start",
     x: GAME_WIDTH / 2,
     y: GAME_HEIGHT / 4,
@@ -245,6 +245,7 @@ window.addEventListener("load",function() {
   
   //start game
   step();
+
 
 });  
 
