@@ -49,7 +49,7 @@ window.addEventListener("load",function() {
     speedX: 0
   };
 
-  var downHandlerTouch = function() {
+  var downHandlerTouch = function(e) {
     e.preventDefault();
     if (game.running === false && game.gameOver === false) {
       game.running = true;
@@ -68,8 +68,8 @@ window.addEventListener("load",function() {
     }
   };
   
-  var upHandlerTouch = function() {
-    //e.preventDefault();
+  var upHandlerTouch = function(e) {
+    e.preventDefault();
   };
   
   var upHandlerMouse = function() {
@@ -77,7 +77,7 @@ window.addEventListener("load",function() {
   };
 
   var mouseMoveHandler = function(e) {
-    //e.preventDefault();
+    e.preventDefault();
     pointer.x = (e.clientX - canvas.getBoundingClientRect().left) * GAME_WIDTH / canvas.getBoundingClientRect().width;
     pointer.y = (e.clientY - canvas.getBoundingClientRect().top) * GAME_HEIGHT / canvas.getBoundingClientRect().height;
     
