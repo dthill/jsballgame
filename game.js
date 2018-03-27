@@ -90,12 +90,12 @@ window.addEventListener("load",function() {
   };
 
     
-  canvas.addEventListener('touchstart', downHandlerTouch);
-  canvas.addEventListener('touchend', upHandlerTouch);
-  document.addEventListener("touchmove", touchMoveHandler);
-  canvas.addEventListener("mousedown", downHandlerMouse);
-  canvas.addEventListener("mouseup", upHandlerMouse);
-  document.addEventListener("mousemove", mouseMoveHandler);
+  canvas.addEventListener('touchstart', downHandlerTouch,false);
+  canvas.addEventListener('touchend', upHandlerTouch,false);
+  document.addEventListener("touchmove", touchMoveHandler, false);
+  canvas.addEventListener("mousedown", downHandlerMouse, false);
+  canvas.addEventListener("mouseup", upHandlerMouse, false);
+  document.addEventListener("mousemove", mouseMoveHandler, false);
 
 
 
