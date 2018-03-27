@@ -76,8 +76,8 @@ window.addEventListener("load",function() {
   };
 
     
-  canvas.addEventListener('touchstart', downHandler);
-  canvas.addEventListener('touchend', upHandler);
+  document.addEventListener('touchstart', downHandler);
+  document.addEventListener('touchend', upHandler);
   document.addEventListener("touchmove", touchMoveHandler);
   canvas.addEventListener("mousedown", downHandler);
   canvas.addEventListener("mouseup", upHandler);
