@@ -50,7 +50,7 @@ window.addEventListener("load",function() {
   };
 
   var downHandlerTouch = function() {
-    //e.preventDefault();
+    e.preventDefault();
     if (game.running === false && game.gameOver === false) {
       game.running = true;
       step();
