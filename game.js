@@ -84,7 +84,7 @@ window.addEventListener("load",function() {
   };
   
   var touchMoveHandler = function(e) {
-    //e.preventDefault();
+    e.preventDefault();
     pointer.x = (e.touches[0].clientX - canvas.getBoundingClientRect().left) * GAME_WIDTH / canvas.getBoundingClientRect().width;
     pointer.y = (e.touches[0].clientY - canvas.getBoundingClientRect().top) * GAME_HEIGHT / canvas.getBoundingClientRect().height;
   };
