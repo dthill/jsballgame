@@ -49,7 +49,17 @@ window.addEventListener("load",function() {
     speedX: 0
   };
 
-  var downHandler = function() {
+  var downHandlerTouch = function() {
+    e.preventDefault();
+    if (game.running === false && game.gameOver === false) {
+      game.running = true;
+      step();
+    } else if (game.gameOver === true) {
+      window.location.reload()
+    }
+  };
+
+  var downHandlerMouse = function() {
     if (game.running === false && game.gameOver === false) {
       game.running = true;
       step();
@@ -76,10 +86,10 @@ window.addEventListener("load",function() {
   };
 
     
-  document.addEventListener('touchstart', downHandler);
-  document.addEventListener('touchend', upHandler);
+  canvas.addEventListener('touchstart', downHandlerTouch);
+  canvas.addEventListener('touchend', upHandler);
   document.addEventListener("touchmove", touchMoveHandler);
-  canvas.addEventListener("mousedown", downHandler);
+  canvas.addEventListener("mousedown", downHandlerMouse);
   canvas.addEventListener("mouseup", upHandler);
   document.addEventListener("mousemove", mouseMoveHandler);
 
