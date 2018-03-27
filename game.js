@@ -25,7 +25,7 @@ window.addEventListener("load",function() {
   };
 
   var menu = {
-    text: "Ping",
+    text: "P1ng",
     message: "click to start",
     x: GAME_WIDTH / 2,
     y: GAME_HEIGHT / 4,
@@ -68,10 +68,14 @@ window.addEventListener("load",function() {
     }
   };
   
-  var upHandler = function() {
-
+  var upHandlerTouch = function() {
+    e.preventDefault();
   };
   
+  var upHandlerMouse = function() {
+
+  };
+
   var mouseMoveHandler = function(e) {
     e.preventDefault();
     pointer.x = (e.clientX - canvas.getBoundingClientRect().left) * GAME_WIDTH / canvas.getBoundingClientRect().width;
@@ -87,10 +91,10 @@ window.addEventListener("load",function() {
 
     
   canvas.addEventListener('touchstart', downHandlerTouch);
-  canvas.addEventListener('touchend', upHandler);
+  canvas.addEventListener('touchend', upHandlerTouch);
   document.addEventListener("touchmove", touchMoveHandler);
   canvas.addEventListener("mousedown", downHandlerMouse);
-  canvas.addEventListener("mouseup", upHandler);
+  canvas.addEventListener("mouseup", upHandlerMouse);
   document.addEventListener("mousemove", mouseMoveHandler);
 
 
