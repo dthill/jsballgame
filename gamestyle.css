@@ -10,6 +10,9 @@ body {
 
 #canvas-container {
    text-align: center;
+   top: 0;
+   vertical-align: text-top;
+
 }
 
 
