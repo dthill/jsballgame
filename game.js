@@ -50,7 +50,7 @@ window.addEventListener("load",function() {
   };
 
   var downHandlerTouch = function() {
-    e.preventDefault();
+    //e.preventDefault();
     if (game.running === false && game.gameOver === false) {
       game.running = true;
       step();
@@ -69,7 +69,7 @@ window.addEventListener("load",function() {
   };
   
   var upHandlerTouch = function() {
-    e.preventDefault();
+    //e.preventDefault();
   };
   
   var upHandlerMouse = function() {
@@ -77,14 +77,14 @@ window.addEventListener("load",function() {
   };
 
   var mouseMoveHandler = function(e) {
-    e.preventDefault();
+    //e.preventDefault();
     pointer.x = (e.clientX - canvas.getBoundingClientRect().left) * GAME_WIDTH / canvas.getBoundingClientRect().width;
     pointer.y = (e.clientY - canvas.getBoundingClientRect().top) * GAME_HEIGHT / canvas.getBoundingClientRect().height;
     
   };
   
   var touchMoveHandler = function(e) {
-    e.preventDefault();
+    //e.preventDefault();
     pointer.x = (e.touches[0].clientX - canvas.getBoundingClientRect().left) * GAME_WIDTH / canvas.getBoundingClientRect().width;
     pointer.y = (e.touches[0].clientY - canvas.getBoundingClientRect().top) * GAME_HEIGHT / canvas.getBoundingClientRect().height;
   };
